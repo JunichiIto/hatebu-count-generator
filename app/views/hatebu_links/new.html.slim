@@ -10,7 +10,9 @@ h1 Hatebu count link generator
 hr
 
 - link_html = to_hatebu_count_link(@hatebu.page_url)
-pre = '' + link_html
+textarea.view-source class='form-control' = link_html
+p
+textarea.view-source class='form-control' = ReverseMarkdown.convert(link_html)
 
 .hatebu-image= link_html
 
