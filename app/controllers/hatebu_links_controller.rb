@@ -1,11 +1,12 @@
 class HatebuLinksController < ApplicationController
   def new
-    @hatebu = Hatebu.new
+    _params = session['hatebu'] || {}
+    @hatebu = Hatebu.new(_params)
   end
 
   def create
-    @hatebu = Hatebu.new(hatebu_params)
-    render 'new'
+    session['hatebu'] = hatebu_params
+    redirect_to root_path
   end
 
   private
