@@ -5,7 +5,8 @@ h1 Hatebu count link generator
     = f.label :page_url, class: 'form-label'
     = f.text_field :page_url, class: 'form-control js-focus-on-load js-select-on-focus'
   .form-action
-    = f.submit '送信', class: 'btn btn-primary'
+    = f.submit '変換', class: 'btn btn-primary btn-submit'
+    = link_to 'クリア', '', class: 'btn btn-secondary btn-clear js-clear-all'
 
 hr
 
