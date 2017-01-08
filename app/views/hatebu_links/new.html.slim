@@ -12,9 +12,9 @@ hr
 
 - link_html = to_hatebu_count_link(@hatebu.page_url)
 h4.result-heading HTML
-textarea.view-source.js-select-on-focus class='form-control' readonly='readonly' = link_html
+textarea.view-source.js-select-on-focus cols=20 rows=4 class='form-control' readonly='readonly' = link_html
 h4.result-heading  Markdown
-textarea.view-source.js-select-on-focus class='form-control' readonly='readonly' = ReverseMarkdown.convert(link_html)
+textarea.view-source.js-select-on-focus cols=20 rows=4 class='form-control' readonly='readonly' = ReverseMarkdown.convert(link_html)
 h4.result-heading  Preview
 .hatebu-image= link_html
 
