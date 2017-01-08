@@ -1,0 +1,16 @@
+h1 Hatebu count link generator
+
+= form_for @hatebu, url: hatebu_link_path, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    = f.label :page_url, class: 'form-label'
+    = f.text_field :page_url, class: 'form-control'
+  .form-action
+    = f.submit '送信', class: 'btn btn-primary'
+
+hr
+
+- link_html = to_hatebu_count_link(@hatebu.page_url)
+pre = '' + link_html
+
+.hatebu-image= link_html
+
