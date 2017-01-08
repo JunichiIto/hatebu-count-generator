@@ -6,7 +6,6 @@ module HatebuLinksHelper
     image_url = "http://b.st-hatena.com/entry/image/#{truncated_url}"
     content_tag :a, href: page_url, target: '_blank' do
       tag = content_tag :img, '', src: image_url
-      logger.debug "[DEBUG] #{tag}"
       concat tag
     end
   end
